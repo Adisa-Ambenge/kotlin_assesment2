@@ -2,6 +2,7 @@ fun main() {
     val country = countries("Kenya")
     println(country)
     multipleNumbers(100)
+    takePassword("adisa2023!")
 }
 //Write and invoke one function that takes in a random string and returns the
 //following values: first character, last character, length of the string and
@@ -29,9 +30,8 @@ fun countries(country:String):CountryStats{
 fun takePassword(password:String){
     for (pass in password){
       val len = password.count()>=8
-        val characters = password[i]<=16
-        val passcode = (!="password")
-        val content = (password:Int)
+        val characters = password[password.count()-1]<=password[16]
+        val passcode = (password!="password")
     }
 }
 //Create a function that prints out multiples of 6 and 8 between 1 and 1000. For
@@ -42,9 +42,6 @@ for (num in numbers<=1000){
     if (num %6 && num%8 ==0){
        println("Bingo!")
     }
-
-
-
 }
 //Create a class CurrentAccount with the following attributes: account number,
 //account name, balance. It has the following functions:
@@ -57,23 +54,20 @@ for (num in numbers<=1000){
 
 class CurrentAccount(var accountNumber:Int,var accountName:String,var balance:Double){
     fun deposit(amount:Double):Double{
-        var increment = 0
+        var increment = 0.0
         for (a in amount){
-            increment+=a
+            increment=+a
         }
         return increment
     }
 
-    fun withdraw(amount: Double):Double{
-        var decrement = 0
+    fun withdraw(cash: Double):Double{
+        var decrement = 0.0
         for (d in amount){
-            decrement-=d
+            decrement=-d
         }
         return decrement
     }
 }
-
-
-
 
 }
